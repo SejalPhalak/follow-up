@@ -1,0 +1,302 @@
+/* Navbar */
+
+.sidebar {
+  background-color: #203354;
+  border: 2px solid;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  padding-top: 60px;
+  transition: all 0.3s ease-in-out;
+  z-index: 1030;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .nav-link {
+  color: white;
+  font-weight: 500;
+  background-color: #203354;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  background-color: #1261a0;
+  color: white;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    margin-left: -250px;
+  }
+
+  .sidebar.show {
+    margin-left: 0;
+  }
+
+  .content {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}
+
+.accordion-button {
+  background-color: #203354;
+  color: white;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #1261a0;
+  color: rgb(255, 251, 251);
+}
+
+#masterHeading .accordion-button:not(.collapsed)::after,
+#masterHeading .accordion-button.collapsed::after {
+  filter: brightness(0) invert(1);
+}
+
+/* White dropdown caret for Master */
+#masterHeading .accordion-button::after {
+  filter: brightness(0) invert(1);
+}
+
+/* White dropdown caret for Follow Up */
+#followUpHeading .accordion-button::after {
+  filter: brightness(0) invert(1);
+}
+
+/* White dropdown caret for Task Management */
+#taskManagementHeading .accordion-button::after {
+  filter: brightness(0) invert(1);
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1029;
+}
+
+.sidebar.show + .sidebar-overlay {
+  display: block;
+}
+
+/* Navbar - End */
+
+.timeline-line {
+  border-left: 2px solid #203354;
+  margin-left: 30px;
+  position: relative;
+}
+
+.timeline-entry {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 60px;
+}
+
+.timeline-entry::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #203354;
+  border-radius: 50%;
+}
+
+.timeline-date-box {
+  width: 80px;
+  height: 60px;
+  border: 2px solid #203354;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 8px;
+  border-radius: 5px;
+  margin-right: 20px;
+  color: #203354;
+}
+
+.icon-btn {
+  cursor: pointer;
+  color: #192841;
+}
+
+.timeline-container {
+  background-color: #fff;
+}
+
+.card {
+  background-color: #fff;
+}
+
+.cursor-pointer * {
+  cursor: pointer;
+}
+
+.hover-effect:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.05);
+  background-color: #203354; /* Light gray */
+  color: white;
+}
+#ffcdb2 .hover-effect {
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar .text-primary {
+  color: white !important;
+}
+
+.text-primary {
+  color: #192841 !important;
+}
+
+/* Remaining FollowUp */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.header-right span {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.section-title {
+  text-align: center;
+  color: #203354;
+  margin: 2rem 0 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.lead-card {
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  margin: 1rem 2rem;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+.lead-info {
+  display: flex;
+}
+
+.lead-icon {
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.lead-text {
+  font-size: 14px;
+}
+
+.lead-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.add-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  font-size: 26px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.arrow-btn {
+  font-size: 22px;
+  align-self: center;
+  cursor: pointer;
+}
+
+#mainContent {
+  padding: 1rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .lead-card {
+    flex-direction: column;
+    align-items: start;
+    margin: 1rem 0rem;
+  }
+
+  #mainContent {
+    padding: 1rem 0rem;
+  }
+
+  .arrow-btn {
+    align-self: flex-end;
+  }
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 1rem;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.employee-card.selected {
+  border: 2px solid #e5989b; /* matches your button color */
+  box-shadow: 0 0 10px rgba(229, 152, 155, 0.5);
+  background-color: #fff0f1;
+}
+
+/* FollowUp - End */
